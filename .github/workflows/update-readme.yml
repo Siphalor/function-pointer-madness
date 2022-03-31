@@ -1,0 +1,28 @@
+on:
+  push:
+  workflow_dispatch:
+
+name: Update README
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Update README source quotes
+        run: |
+          repo_url="https://github.com/Siphalor/function-pointer-madness"
+          repo_url=$(sed 's/\//\\\//g' <<<"$repo_url")
+          for f in "src"/*;
+          do
+          	lang_name=$(head -n 1 $f|grep -Po '[a-zA-Z]([\w\s]*\w)?');
+          	commit=$(git log -n 1 --pretty=format:%H -- $f);
+          	f_url=$(sed 's/\//\\\//g' <<<"$f")
+          	sed -i "/\<$lang_name\>/ s/[^|]*\(#L[0-9]\+-\(L[0-9]\+\)\?\)/ $repo_url\/blob\/$commit\/$f_url\1/" README.md
+          done
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update README source quotes
+          file_pattern: README.md
