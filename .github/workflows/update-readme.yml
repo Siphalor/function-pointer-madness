@@ -14,12 +14,12 @@ jobs:
         run: |
           repo_url="https://github.com/Siphalor/function-pointer-madness"
           repo_url=$(sed 's/\//\\\//g' <<<"$repo_url")
-          for f in "src"/*;
+          for f in $(grep -Po "\|\s+(.*blob/\w+)?/\K[^#]+" README.md)
           do
-          	lang_name=$(head -n 1 $f|grep -Po '[a-zA-Z]([\w\s]*\w)?');
-          	commit=$(git log -n 1 --pretty=format:%H -- $f);
+          	commit=$(git log -n 1 --pretty=format:%H -- $f)
           	f_url=$(sed 's/\//\\\//g' <<<"$f")
-          	sed -i "/\<$lang_name\>/ s/[^|]*\(#L[0-9]\+-\(L[0-9]\+\)\?\)/ $repo_url\/blob\/$commit\/$f_url\1/" README.md
+          	echo "/$f_url/ s/\| \(.*blob/[a-zA-Z0-9]+\)\?\/$f_url/\| $repo_url\/blob\/$commit\/$f_url\1/"
+          	sed "s/| \([^|]*blob\/[a-zA-Z0-9]\+\)\?\/$f_url/| $repo_url\/blob\/$commit\/$f_url/" README.md
           done
 
       - uses: stefanzweifel/git-auto-commit-action@v4
