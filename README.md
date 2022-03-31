@@ -1,6 +1,6 @@
 # function-pointer-madness
 How to write function pointer definitions in multiple languages
 
-| Language                       | Source example                             |
+| Language                       | Source example |
 |--------------------------------|--------------------------------------------|
-| JavaScript                     |                                            |
+| JavaScript                     | #L4-L6 |
