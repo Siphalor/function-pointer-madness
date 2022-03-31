@@ -19,7 +19,7 @@ jobs:
           	commit=$(git log -n 1 --pretty=format:%H -- $f)
           	f_url=$(sed 's/\//\\\//g' <<<"$f")
           	echo "/$f_url/ s/\| \(.*blob/[a-zA-Z0-9]+\)\?\/$f_url/\| $repo_url\/blob\/$commit\/$f_url\1/"
-          	sed "s/| \([^|]*blob\/[a-zA-Z0-9]\+\)\?\/$f_url/| $repo_url\/blob\/$commit\/$f_url/" README.md
+          	sed -i "s/| \([^|]*blob\/[a-zA-Z0-9]\+\)\?\/$f_url/| $repo_url\/blob\/$commit\/$f_url/" README.md
           done
 
       - uses: stefanzweifel/git-auto-commit-action@v4
