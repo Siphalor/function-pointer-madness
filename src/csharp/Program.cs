@@ -1,9 +1,9 @@
 ﻿unsafe // Function pointers require unsafe context
 {
     Action run = () => Console.WriteLine("Hello World");
-    Action<string> consume = static (text) => Console.WriteLine($"Hello {text}!"); // Static lambdas are much faster, but may not have a closure.
+    Action<string> consume = static (text) => Console.WriteLine($"Hello {text}!");
     Func<string[], string[]> lowercaseAll = static strings => strings.Select(static text => text.ToLower()).ToArray();
-    delegate*<IEnumerable<string>, Action<string>, void> forEach = &ForEach; // Function pointers require C# 9 or greater and have virtually no overhead compared to method calls.
+    delegate*<IEnumerable<string>, Action<string>, void> forEach = &ForEach;
 
     run();
     consume("CSharp");
