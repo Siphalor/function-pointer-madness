@@ -9,10 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Update README source quotes
         run: |
-          repo_url="https://github.com/Siphalor/function-pointer-madness"
+          repo_url="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY"
           repo_url=$(sed 's/\//\\\//g' <<<"$repo_url")
           for f in $(grep -Po "\|\s+(.*blob/\w+)?/\K[^#]+" README.md)
           do
