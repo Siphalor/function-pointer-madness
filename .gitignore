@@ -1,4 +1,10 @@
+# csharp
 bin/
 obj/
 
+# rust
+[cC]argo.lock
+target/
+
+# c
 *.out
