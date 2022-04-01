@@ -7,6 +7,7 @@ This includes function pointers to
 - A simple function `run` that takes no arguments and prints `Hello World!`
 - A function `consume` that takes an argument to use as `Hello {}!`
 - A function `lowercase_all` that takes an array of strings and returns a new array with these strings converted as lowercase
+- A function `for_each` that applies another function (given by pointer itself) to an array of strings
 
 Yes, a lot of languages have `var`/`let`/`auto` to deduce types.
 This overview is meant to present the differences in usage though, which often includes writing out the type signatures for use in fields or arguments.
