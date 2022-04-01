@@ -20,3 +20,4 @@ This overview is meant to present the differences in usage though, which often i
 | [JavaScript](https://uncyclopedia.com/wiki/JavaScript)                  | https://github.com/Siphalor/function-pointer-madness/blob/41f743475159817ed3fa7010997c84d9a72038e4/src/main.js#L4-L6                          |
 | [Python](https://en.uncyclopedia.co/wiki/Python_(programming_language)) | https://github.com/Siphalor/function-pointer-madness/blob/a7a91f49ab19edcba61d708276b619b122092320/src/main.py#L4-L7                          |
 | [Rust](https://uncyclopedia.com/wiki/Rust_(programming_language))       | https://github.com/Siphalor/function-pointer-madness/blob/55ab39c74db2279f852fe572d61c7e9e103a6354/src/rust/src/main.rs#L2-L5                 |
+| [Haskell](https://uncyclopedia.com/wiki/Haskell)                        | /src/haskell/main.hs#L7-L9                                                                                                                    |
