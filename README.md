@@ -19,4 +19,4 @@ This overview is meant to present the differences in usage though, which often i
 | Java       | https://github.com/Siphalor/function-pointer-madness/blob/cb3c17e69531c71b7fea9959fd079565e8729317/src/java/src/main/java/de/Main.java#L9-L14 |
 | JavaScript | https://github.com/Siphalor/function-pointer-madness/blob/41f743475159817ed3fa7010997c84d9a72038e4/src/main.js#L4-L6           |
 | Python     | https://github.com/Siphalor/function-pointer-madness/blob/a7a91f49ab19edcba61d708276b619b122092320/src/main.py#L4-L7           |
-| Rust       | /src/rust/src/main.rs#L2-L10                                                                                                   |
+| Rust       | https://github.com/Siphalor/function-pointer-madness/blob/acacfc1d2ed66c4826270e7ca7d44fcdf23e4592/src/rust/src/main.rs#L2-L10                                                                                                   |
