@@ -1,0 +1,18 @@
+plugins {
+    id 'application'
+}
+
+group 'de'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+}
+
+application {
+	mainClassName = 'de.Main'
+}
