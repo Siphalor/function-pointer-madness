@@ -12,11 +12,11 @@ This includes function pointers to
 Yes, a lot of languages have `var`/`let`/`auto` to deduce types.
 This overview is meant to present the differences in usage though, which often includes writing out the type signatures for use in fields or arguments.
 
-| Language   | Source example                                                                                                                                |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| C          | https://github.com/Siphalor/function-pointer-madness/blob/f98f1273c9dd57a84e9f1000113a43a28108bac3/src/main.c#L12-L15                         |
-| C#         | https://github.com/Siphalor/function-pointer-madness/blob/e9b057732a4d7b91255e06b7e6361404cdc266ed/src/csharp/Program.cs#L1-L9                |
-| Java       | https://github.com/Siphalor/function-pointer-madness/blob/cb3c17e69531c71b7fea9959fd079565e8729317/src/java/src/main/java/de/Main.java#L9-L14 |
-| JavaScript | https://github.com/Siphalor/function-pointer-madness/blob/41f743475159817ed3fa7010997c84d9a72038e4/src/main.js#L4-L6           |
-| Python     | https://github.com/Siphalor/function-pointer-madness/blob/a7a91f49ab19edcba61d708276b619b122092320/src/main.py#L4-L7           |
-| Rust       | https://github.com/Siphalor/function-pointer-madness/blob/5ae8d64a04106c4758f71fdc7113f7861917ab0d/src/rust/src/main.rs#L2-L10                                                                                                   |
+| Language                                                                | Source example                                                                                                                                |
+| ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| [C](https://uncyclopedia.com/wiki/C)                                    | https://github.com/Siphalor/function-pointer-madness/blob/f98f1273c9dd57a84e9f1000113a43a28108bac3/src/main.c#L12-L15                         |
+| [C#](https://uncyclopedia.com/wiki/C_Sharp)                             | https://github.com/Siphalor/function-pointer-madness/blob/e9b057732a4d7b91255e06b7e6361404cdc266ed/src/csharp/Program.cs#L1-L9                |
+| [Java](https://uncyclopedia.com/wiki/Java)                              | https://github.com/Siphalor/function-pointer-madness/blob/cb3c17e69531c71b7fea9959fd079565e8729317/src/java/src/main/java/de/Main.java#L9-L14 |
+| [JavaScript](https://uncyclopedia.com/wiki/JavaScript)                  | https://github.com/Siphalor/function-pointer-madness/blob/41f743475159817ed3fa7010997c84d9a72038e4/src/main.js#L4-L6                          |
+| [Python](https://en.uncyclopedia.co/wiki/Python_(programming_language)) | https://github.com/Siphalor/function-pointer-madness/blob/a7a91f49ab19edcba61d708276b619b122092320/src/main.py#L4-L7                          |
+| [Rust](https://uncyclopedia.com/wiki/Rust_(programming_language))       | https://github.com/Siphalor/function-pointer-madness/blob/5ae8d64a04106c4758f71fdc7113f7861917ab0d/src/rust/src/main.rs#L2-L10                |
