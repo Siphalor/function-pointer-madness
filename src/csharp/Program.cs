@@ -1,22 +1,19 @@
-﻿// A run of the mill lambda
-Action run = () => Console.WriteLine("Hello World");
-
-unsafe // Function pointers require unsafe context
+﻿unsafe // Function pointers require unsafe context
 {
-    // Function pointers require C# 9 or greater and have virtually no overhead compared to method calls.
-    delegate*<string, void> consume = &Consume;
-    // Static lambdas are much faster, but may not have a closure.
+    Action run = () => Console.WriteLine("Hello World");
+    Action<String> consume = static (text) => Console.WriteLine($"Hello {text}!"); // Static lambdas are much faster, but may not have a closure.
     Func<string[], string[]> lowercaseAll = static strings => strings.Select(static text => text.ToLower()).ToArray();
+    delegate*<IEnumerable<String>, Action<String>, void> forEach = ForEach; // Function pointers require C# 9 or greater and have virtually no overhead compared to method calls.
 
     run();
     consume("CSharp");
-    foreach (string text in lowercaseAll(new[] { "ABC", "DEF" }))
-    {
-        consume(text);
-    }
-}
+    forEach(lowercaseAll(new[] { "ABC", "DEF" }), consume);
+} 
 
-static void Consume(string text)
+static void ForEach<T>(this IEnumerable<T> sequence, Action<T> fun)
 {
-    Console.WriteLine($"Hello {text}!");
+    foreach (T element in sequence)
+    {
+        fun(element);
+    }
 }
